@@ -96,5 +96,41 @@ ttk.Button(tab_dd_a_dms, text="Convertir DD a DMS", command=convertir_dd_a_dms).
 label_resultado_dd_a_dms = ttk.Label(tab_dd_a_dms)
 label_resultado_dd_a_dms.grid(row=3, columnspan=2)
 
+# Pestaña DMS a DD
+tab_dms_a_dd = ttk.Frame(notebook)
+notebook.add(tab_dms_a_dd, text="GRADOS, MINUTOS Y SEGUNDOS")
+
+ttk.Label(tab_dms_a_dd, text="Grados Lat:").grid(row=0, column=0, padx=5, pady=5)
+entry_lat_grados = ttk.Entry(tab_dms_a_dd)
+entry_lat_grados.grid(row=0, column=1, padx=5, pady=5)
+
+ttk.Label(tab_dms_a_dd, text="Minutos Lat:").grid(row=1, column=0, padx=5, pady=5)
+entry_lat_minutos = ttk.Entry(tab_dms_a_dd)
+entry_lat_minutos.grid(row=1, column=1, padx=5, pady=5)
+
+ttk.Label(tab_dms_a_dd, text="Segundos Lat:").grid(row=2, column=0, padx=5, pady=5)
+entry_lat_segundos = ttk.Entry(tab_dms_a_dd)
+entry_lat_segundos.grid(row=2, column=1, padx=5, pady=5)
+
+ttk.Label(tab_dms_a_dd, text="Grados Lon:").grid(row=3, column=0, padx=5, pady=5)
+entry_lon_grados = ttk.Entry(tab_dms_a_dd)
+entry_lon_grados.grid(row=3, column=1, padx=5, pady=5)
+
+ttk.Label(tab_dms_a_dd, text="Minutos Lon:").grid(row=4, column=0, padx=5, pady=5)
+entry_lon_minutos = ttk.Entry(tab_dms_a_dd)
+entry_lon_minutos.grid(row=4, column=1, padx=5, pady=5)
+
+ttk.Label(tab_dms_a_dd, text="Segundos Lon:").grid(row=5, column=0, padx=5, pady=5)
+entry_lon_segundos = ttk.Entry(tab_dms_a_dd)
+entry_lon_segundos.grid(row=5, column=1, padx=5, pady=5)
+
+ttk.Button(tab_dms_a_dd, text="Convertir DMS a DD", command=convertir_dms_a_dd).grid(row=6, columnspan=2, pady=10)
+
+label_resultado_dms_a_dd = ttk.Label(tab_dms_a_dd)
+label_resultado_dms_a_dd.grid(row=7, columnspan=2)
+
+notebook.pack(expand=1, fill="both")
+
+ventana.mainloop()
 
 
